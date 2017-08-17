@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">一读</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="string_setting_user">个人</string>
+    <string name="string_setting_favorite">我的收藏</string>
+    <string name="string_setting_browse">浏览设置</string>
+    <string name="string_setting_save_pic">图片下载</string>
+    <string name="string_setting_clean">清理缓存</string>
+    <string name="string_font_color">字体颜色</string>
+    <string name="string_setting_about">关于</string>
+    <string name="txt_copyright">版权所有 &#169; 2017 神话出品</string>
+    <string name="please_login">请先登录</string>
+    <string name="data_error">数据获取失败</string>
+    <string name="please_permission">请赋予app读取文件的权限</string>
+    <string name="save_pic_success">图片已保存到手机</string>
+    <string name="save_pic_error">图片保存失败</string>
+    <string name="launcher_background">启动背景图</string>
+    <string name="current_background">当前浏览背景图</string>
+    <string name="menu_random">随机</string>
+    <string name="menu_favorite">收藏</string>
+    <string name="menu_setting">设置</string>
+    <string name="mail_error">邮箱格式错误</string>
+    <string name="password_error">密码长度应大于6小于32</string>
+    <string name="operationing">操作中&#8230;</string>
+    <string name="string_login">登录</string>
+    <string name="string_sure">确定</string>
+    <string name="string_sign">注册</string>
+    <string name="string_forget">忘记密码</string>
+    <string name="string_sign_success">注册成功</string>
+    <string name="string_sign_error">注册失败:</string>
+    <string name="string_login_success">登录成功</string>
+    <string name="operation_error">操作失败:</string>
+    <string name="reset_success">重置密码请求成功，请到 %s 邮箱进行密码重置操作</string>
+    <string name="string_error_again">操作失败,稍候再试</string>
+    <string name="string_message">提示</string>
+    <string name="string_had_login">用户已登录，是否退出当前用户？</string>
+    <string name="string_cancel">取消</string>
+    <string name="string_loading">加载中</string>
+    <string name="data_null">数据为空</string>
+    <string name="data_load_error">数据加载失败</string>
+    <string name="favorite_error">收藏加载失败:</string>
+    <string name="my">神话</string>
+    <string name="string_github">https://github.com/shenhuanet</string>
+    <string name="string_email">shenhuanet@126.com</string>
+    <string name="hint_email">邮箱</string>
+    <string name="hint_password">密码</string>
+
+</resources>

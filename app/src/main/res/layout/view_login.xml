@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <com.shenhua.oneread.widget.CleanEditText
+            android:id="@+id/et_email_phone"
+            style="@style/LoginEditStyle"
+            android:hint="@string/hint_email"
+            android:inputType="text" />
+
+        <com.shenhua.oneread.widget.CleanEditText
+            android:id="@+id/et_password"
+            style="@style/LoginEditStyle"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_login_selector"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

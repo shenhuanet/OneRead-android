@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shenhua.oneread.ui.MainActivity">
+
+    <ImageView
+        android:id="@+id/image_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/image_load"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_article_load"
+        android:visibility="gone" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88ffffff"
+        android:descendantFocusability="blocksDescendants"
+        android:visibility="gone">
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <include layout="@layout/layout_menu" />
+
+</android.support.design.widget.CoordinatorLayout>

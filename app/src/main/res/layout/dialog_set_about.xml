@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/item_layout_padding">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/string_setting_about" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="center"
+            app:materialIcon="account"
+            app:materialIconColor="@color/colorAccent"
+            app:materialIconSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/my"
+            android:textColor="@color/colorText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="center"
+            app:materialIcon="github_circle"
+            app:materialIconColor="@color/colorAccent"
+            app:materialIconSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/string_github"
+            android:textColor="@color/colorText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="center"
+            app:materialIcon="email"
+            app:materialIconColor="@color/colorAccent"
+            app:materialIconSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/string_email"
+            android:textColor="@color/colorText" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:text="@string/txt_copyright" />
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+/apks/release/output.json
+/app/src/main/cpp/core.cpp
+/app/src/main/cpp/util.cpp

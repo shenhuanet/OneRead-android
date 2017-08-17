@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OneRead</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="string_setting_user">User</string>
+    <string name="string_setting_favorite">My Favorite</string>
+    <string name="string_setting_browse">Browse Setting</string>
+    <string name="string_setting_save_pic">Save Picture</string>
+    <string name="string_setting_clean">Clean Memory</string>
+    <string name="string_font_color">Font Color</string>
+    <string name="string_setting_about">About</string>
+    <string name="txt_copyright">All Rights Reserved &#169; 2017 ShenhuaNet</string>
+    <string name="please_login">please login</string>
+    <string name="data_error">data error</string>
+    <string name="please_permission">please give some permission</string>
+    <string name="save_pic_success">saved success</string>
+    <string name="save_pic_error">saved error</string>
+    <string name="launcher_background">launcher background</string>
+    <string name="current_background">current background</string>
+    <string name="menu_random">Random</string>
+    <string name="menu_favorite">Like</string>
+    <string name="menu_setting">Setting</string>
+    <string name="mail_error">Email format error</string>
+    <string name="password_error">Password length should be greater than 6, less than 32</string>
+    <string name="operationing">In operation&#8230;</string>
+    <string name="string_login">Login</string>
+    <string name="string_sure">Sure</string>
+    <string name="string_sign">Register</string>
+    <string name="string_forget">Forgot password</string>
+    <string name="string_sign_success">Register success</string>
+    <string name="string_sign_error">Register failed:</string>
+    <string name="string_login_success">Login success</string>
+    <string name="operation_error">Operation failed:</string>
+    <string name="reset_success">Reset password email request successful, please go to the %s mailbox to operation</string>
+    <string name="string_error_again">Operation failed. Try again later</string>
+    <string name="string_message">Info</string>
+    <string name="string_had_login">The user is logged in. Do you want to quit the current user?</string>
+    <string name="string_cancel">Cancel</string>
+    <string name="string_loading">Loading</string>
+    <string name="data_null">Data null</string>
+    <string name="data_load_error">Data loading failed</string>
+    <string name="favorite_error">Favorite failed:</string>
+    <string name="my">Shen hua</string>
+    <string name="string_github">https://github.com/shenhuanet</string>
+    <string name="string_email">shenhuanet@126.com</string>
+    <string name="hint_email">Input your email</string>
+    <string name="hint_password">Input your password</string>
+
+</resources>

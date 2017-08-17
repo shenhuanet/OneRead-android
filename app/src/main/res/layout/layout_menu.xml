@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shenhua.oneread.fab.FloatingActionButtonPlus xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fabs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="-1dp"
+    app:layout_behavior="com.shenhua.oneread.fab.ScrollBehavior"
+    app:mBackgroundColor="#87000000"
+    app:switchFabColor="@color/colorAccent"
+    app:switchFabIcon="@drawable/ic_fab_add">
+
+    <com.shenhua.oneread.fab.FabTagLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tagText="@string/menu_setting">
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_fab_more_white"
+            app:backgroundTint="#468cb7"
+            app:fabSize="mini" />
+
+    </com.shenhua.oneread.fab.FabTagLayout>
+
+    <com.shenhua.oneread.fab.FabTagLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tagText="@string/menu_favorite">
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_fab_favor_unfill_white"
+            app:backgroundTint="#468cb7"
+            app:fabSize="mini" />
+
+    </com.shenhua.oneread.fab.FabTagLayout>
+
+    <com.shenhua.oneread.fab.FabTagLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tagText="@string/menu_random">
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_fab_random"
+            app:backgroundTint="#468cb7"
+            app:fabSize="mini" />
+
+    </com.shenhua.oneread.fab.FabTagLayout>
+
+</com.shenhua.oneread.fab.FloatingActionButtonPlus>

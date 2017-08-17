@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/item_layout_padding"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string_font_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/item_color_black"
+                style="@style/CircleItemStyle.Start"
+                android:foreground="@drawable/circle_color_black" />
+
+            <TextView
+                android:id="@+id/item_color_gray"
+                style="@style/CircleItemStyle.Center"
+                android:foreground="@drawable/circle_color_gray" />
+
+            <TextView
+                android:id="@+id/item_color_accent"
+                style="@style/CircleItemStyle.End"
+                android:foreground="@drawable/circle_color_accent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/item_color_blue"
+                style="@style/CircleItemStyle.Start"
+                android:foreground="@drawable/circle_color_blue" />
+
+            <TextView
+                android:id="@+id/item_color_pink"
+                style="@style/CircleItemStyle.Center"
+                android:foreground="@drawable/circle_color_pink" />
+
+            <TextView
+                android:id="@+id/item_color_yellow"
+                style="@style/CircleItemStyle.End"
+                android:foreground="@drawable/circle_color_yellow" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
