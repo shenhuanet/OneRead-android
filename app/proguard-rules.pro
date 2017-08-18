@@ -23,3 +23,68 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-ignorewarnings
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontskipnonpubliclibraryclassmembers
+-dontpreverify
+-verbose
+-printmapping proguardMapping.txt
+-keepattributes *Annotation*
+-keepattributes Signature
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+-keep public class android.support.v7.widget.** {*;}
+
+-dontwarn cn.bmob.v3.**
+-keep class cn.bmob.v3.** {*;}
+-keep class * extends cn.bmob.v3.BmobObject {*;}
+-keep class com.example.bmobexample.bean.BankCard{*;}
+-keep class com.example.bmobexample.bean.GameScore{*;}
+-keep class com.example.bmobexample.bean.MyUser{*;}
+-keep class com.example.bmobexample.bean.Person{*;}
+-keep class com.example.bmobexample.file.Movie{*;}
+-keep class com.example.bmobexample.file.Song{*;}
+-keep class com.example.bmobexample.relation.Post{*;}
+-keep class com.example.bmobexample.relation.Comment{*;}
+
+-dontwarn okhttp3.**
+-keep class okhttp3.** { *;}
+-keep interface okhttp3.** { *; }
+-dontwarn okio.**
+
+-dontwarn sun.misc.**
+-keepclassmembers class rx.internal.util.unsafe.*ArrayQueue*Field* {
+ long producerIndex;
+ long consumerIndex;
+}
+-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueProducerNodeRef {
+ rx.internal.util.atomic.LinkedQueueNode producerNode;
+}
+-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueConsumerNodeRef {
+ rx.internal.util.atomic.LinkedQueueNode consumerNode;
+}
+
+-dontwarn android.net.compatibility.**
+-dontwarn android.net.http.**
+-dontwarn com.android.internal.http.multipart.**
+-dontwarn org.apache.commons.**
+-dontwarn org.apache.http.**
+-keep class android.net.compatibility.**{*;}
+-keep class android.net.http.**{*;}
+-keep class com.android.internal.http.multipart.**{*;}
+-keep class org.apache.commons.**{*;}
+-keep class org.apache.http.**{*;}
+
+-dontwarn com.tencent.bugly.**
+-keep public class com.tencent.bugly.**{*;}
+-keep class android.support.**{*;}
+
+-keep class org.jsoup.**
+
+-keep class com.shenhua.oneread.ui.MainActivity{
+    private <methods>;
+}
+-keepclassmembers class com.shenhua.oneread.bean.** {*;}
