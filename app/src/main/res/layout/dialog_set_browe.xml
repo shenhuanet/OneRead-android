@@ -27,17 +27,17 @@
             <TextView
                 android:id="@+id/item_color_black"
                 style="@style/CircleItemStyle.Start"
-                android:foreground="@drawable/circle_color_black" />
+                android:background="@drawable/circle_color_black" />
 
             <TextView
                 android:id="@+id/item_color_gray"
                 style="@style/CircleItemStyle.Center"
-                android:foreground="@drawable/circle_color_gray" />
+                android:background="@drawable/circle_color_gray" />
 
             <TextView
                 android:id="@+id/item_color_accent"
                 style="@style/CircleItemStyle.End"
-                android:foreground="@drawable/circle_color_accent" />
+                android:background="@drawable/circle_color_accent" />
 
         </RelativeLayout>
 
@@ -50,17 +50,17 @@
             <TextView
                 android:id="@+id/item_color_blue"
                 style="@style/CircleItemStyle.Start"
-                android:foreground="@drawable/circle_color_blue" />
+                android:background="@drawable/circle_color_blue" />
 
             <TextView
                 android:id="@+id/item_color_pink"
                 style="@style/CircleItemStyle.Center"
-                android:foreground="@drawable/circle_color_pink" />
+                android:background="@drawable/circle_color_pink" />
 
             <TextView
                 android:id="@+id/item_color_yellow"
                 style="@style/CircleItemStyle.End"
-                android:foreground="@drawable/circle_color_yellow" />
+                android:background="@drawable/circle_color_yellow" />
 
         </RelativeLayout>
 

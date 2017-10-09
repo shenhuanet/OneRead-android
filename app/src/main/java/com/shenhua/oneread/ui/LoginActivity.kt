@@ -17,6 +17,9 @@ import cn.bmob.v3.BmobUser
 import cn.bmob.v3.exception.BmobException
 import cn.bmob.v3.listener.LogInListener
 import cn.bmob.v3.listener.UpdateListener
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.request.RequestOptions
 import com.shenhua.oneread.R
 import com.shenhua.oneread.Utils
 import com.shenhua.oneread.bean.User
@@ -40,10 +43,13 @@ class LoginActivity : AppCompatActivity() {
             window.statusBarColor = Color.TRANSPARENT
         }
         setContentView(R.layout.activity_login)
-
-        var bitmap = BitmapFactory.decodeResource(resources, R.drawable.bg_3)
-        bitmap = Utils.blurBitmap(bitmap, 25.0f, this);
-        image_blur.setImageBitmap(bitmap)
+        try {
+            var bitmap = BitmapFactory.decodeResource(resources, R.drawable.bg_3)
+            bitmap = Utils.blurBitmap(bitmap, 25.0f, this);
+            image_blur.setImageBitmap(bitmap)
+        } catch (e: Exception) {
+            Glide.with(this).load(R.drawable.bg_3).apply(RequestOptions.bitmapTransform(CenterCrop())).into(image_blur);
+        }
         tablayout.setupWithViewPager(viewpager)
         fragmentLists.add(Login())
         fragmentLists.add(Register())

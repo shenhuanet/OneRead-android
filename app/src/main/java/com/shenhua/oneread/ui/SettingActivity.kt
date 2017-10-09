@@ -2,7 +2,6 @@ package com.shenhua.oneread.ui
 
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -12,12 +11,13 @@ import android.support.v4.content.ContextCompat
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.TextView
 import cn.bmob.v3.BmobUser
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.shenhua.oneread.R
 import com.shenhua.oneread.Utils
 import com.shenhua.oneread.widget.FavoriteSheet
+import jp.wasabeef.glide.transformations.BlurTransformation
 import kotlinx.android.synthetic.main.activity_setting.*
 import kotlin.concurrent.thread
 
@@ -45,33 +45,33 @@ class SettingActivity : AppCompatActivity(), View.OnClickListener {
             R.id.broweItem -> {
                 dialog!!.setContentView(R.layout.dialog_set_browe)
                 dialog!!.show()
-                dialog!!.window.findViewById<TextView>(R.id.item_color_black).setOnClickListener {
-                    view ->
+                dialog!!.window.findViewById(R.id.item_color_black).setOnClickListener {
+                    _ ->
                     Utils.Config.setWebTextColor(this, "#000000")
                     dismissDialog()
                 }
-                dialog!!.window.findViewById<TextView>(R.id.item_color_gray).setOnClickListener {
-                    view ->
+                dialog!!.window.findViewById(R.id.item_color_gray).setOnClickListener {
+                    _ ->
                     Utils.Config.setWebTextColor(this, "#2C2C2C")
                     dismissDialog()
                 }
-                dialog!!.window.findViewById<TextView>(R.id.item_color_accent).setOnClickListener {
-                    view ->
+                dialog!!.window.findViewById(R.id.item_color_accent).setOnClickListener {
+                    _ ->
                     Utils.Config.setWebTextColor(this, "#9FE1A4")
                     dismissDialog()
                 }
-                dialog!!.window.findViewById<TextView>(R.id.item_color_blue).setOnClickListener {
-                    view ->
+                dialog!!.window.findViewById(R.id.item_color_blue).setOnClickListener {
+                    _ ->
                     Utils.Config.setWebTextColor(this, "#1296DB")
                     dismissDialog()
                 }
-                dialog!!.window.findViewById<TextView>(R.id.item_color_pink).setOnClickListener {
-                    view ->
+                dialog!!.window.findViewById(R.id.item_color_pink).setOnClickListener {
+                    _ ->
                     Utils.Config.setWebTextColor(this, "#DB639B")
                     dismissDialog()
                 }
-                dialog!!.window.findViewById<TextView>(R.id.item_color_yellow).setOnClickListener {
-                    view ->
+                dialog!!.window.findViewById(R.id.item_color_yellow).setOnClickListener {
+                    _ ->
                     Utils.Config.setWebTextColor(this, "#D2CA26")
                     dismissDialog()
                 }
@@ -79,14 +79,14 @@ class SettingActivity : AppCompatActivity(), View.OnClickListener {
             R.id.picItem -> {
                 dialog!!.setContentView(R.layout.dialog_set_pic)
                 dialog!!.show()
-                dialog!!.window.findViewById<TextView>(R.id.download_launcher).setOnClickListener {
-                    view ->
+                dialog!!.window.findViewById(R.id.download_launcher).setOnClickListener {
+                    _ ->
                     imageUrl = Utils.Config.getLauncherImage(this)
                     checkPermissions()
                     dismissDialog()
                 }
-                dialog!!.window.findViewById<TextView>(R.id.download_background).setOnClickListener {
-                    view ->
+                dialog!!.window.findViewById(R.id.download_background).setOnClickListener {
+                    _ ->
                     imageUrl = Utils.Config.getBgImage(this)
                     checkPermissions()
                     dismissDialog()
@@ -116,8 +116,8 @@ class SettingActivity : AppCompatActivity(), View.OnClickListener {
     private fun savePic() {
         thread {
             try {
-                val bitmap = Glide.with(this).load(imageUrl!!).asBitmap()
-                        .into(com.bumptech.glide.request.target.Target.SIZE_ORIGINAL,
+                val bitmap = Glide.with(this).asBitmap().load(imageUrl!!)
+                        .submit(com.bumptech.glide.request.target.Target.SIZE_ORIGINAL,
                                 com.bumptech.glide.request.target.Target.SIZE_ORIGINAL)
                         .get()
                 if (bitmap != null) {
@@ -141,10 +141,8 @@ class SettingActivity : AppCompatActivity(), View.OnClickListener {
             window.statusBarColor = Color.TRANSPARENT
         }
         setContentView(R.layout.activity_setting)
-
-        var bitmap = BitmapFactory.decodeResource(resources, R.drawable.bg_3)
-        bitmap = Utils.blurBitmap(bitmap, 25.0f, this);
-        image_blur.setImageBitmap(bitmap)
+        Glide.with(this).load(R.drawable.bg_3).apply(RequestOptions.bitmapTransform(BlurTransformation(25)))
+                .into(image_blur);
         setListener(userItem, favoriteItem, broweItem, picItem, cleanItem, aboutItem)
         rl_user.setOnClickListener { _ ->
             if (Utils.UserHelper.isLogin(this)) {
@@ -193,8 +191,8 @@ class SettingActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun setListener(vararg views: View) {
-        for (view in views) {
-            view.setOnClickListener(this)
+        for (it in views) {
+            it.setOnClickListener(this)
         }
     }
 }

@@ -79,6 +79,7 @@ class FavoriteSheet : BottomSheetDialogFragment() {
 
         override fun onBindViewHolder(holder: VHolder?, position: Int) {
             val item = this@FavoriteSheet.favorites
+
             holder!!.title!!.text = item!![position].articleTitle
             holder.auth!!.text = item[position].articleAuth
             holder.digest!!.text = item[position].articleDigest
@@ -100,9 +101,9 @@ class FavoriteSheet : BottomSheetDialogFragment() {
     }
 
     class VHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
-        var title = itemView?.findViewById<TextView>(R.id.item_title)
-        var auth = itemView?.findViewById<TextView>(R.id.item_auth)
-        var digest = itemView?.findViewById<TextView>(R.id.item_digest)
+        var title = itemView?.findViewById(R.id.item_title) as TextView
+        var auth = itemView?.findViewById(R.id.item_auth) as TextView
+        var digest = itemView?.findViewById(R.id.item_digest) as TextView
     }
 }
 

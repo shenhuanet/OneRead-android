@@ -41,7 +41,7 @@ class SplashActivity : AppCompatActivity() {
             }
             Utils.Config.setLauncherImage(this, url)
             runOnUiThread {
-                Glide.with(this).load(url).centerCrop().crossFade(2000).into(image_wall)
+                Glide.with(this).load(url).into(image_wall)
                 image_logo.postDelayed({ startAnim() }, 2000)
             }
         }

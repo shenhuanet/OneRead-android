@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
             else -> "null"
         }
         imageUrl = getRandomImage()
-        Glide.with(this).load(imageUrl).crossFade(2000).into(image_bg)
+        Glide.with(this).load(imageUrl).into(image_bg)
         image_bg.postDelayed({
             ObjectAnimator.ofFloat(image_load, "alpha", 0.0f, 1.0f).setDuration(1000).start()
             image_load.visibility = View.VISIBLE
@@ -155,6 +155,7 @@ class MainActivity : AppCompatActivity() {
                         .timeout(10000).ignoreContentType(true).execute()
                 result = res.body()
             } catch (e: Exception) {
+                e.printStackTrace()
                 result = "null"
             }
             article = Gson().fromJson<Article>(result, Article::class.java)
