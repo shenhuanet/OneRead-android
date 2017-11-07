@@ -3,18 +3,16 @@
 A daily reading software in kotlin lang, providing the random background Image save function.
 
 ## ScreenShot
+<div align="center">
+	<img width="300" height="533" src="https://github.com/shenhuanet/OneRead/blob/master/screenshot/pic01.gif"/>
+	<img width="300" height="533" src="https://github.com/shenhuanet/OneRead/blob/master/screenshot/pic02.png"/>
+	<img width="300" height="533" src="https://github.com/shenhuanet/OneRead/blob/master/screenshot/pic03.png"/>
+    <img width="300" height="533" src="https://github.com/shenhuanet/OneRead/blob/master/screenshot/pic04.png"/>
+</div>
 
-![](https://github.com/shenhuanet/OneRead/blob/master/screenshot/pic01.gif)
-
-![](https://github.com/shenhuanet/OneRead/blob/master/screenshot/pic02.png)
-
-![](https://github.com/shenhuanet/OneRead/blob/master/screenshot/pic03.png)
-
-![](https://github.com/shenhuanet/OneRead/blob/master/screenshot/pic04.png)
-
-## 关于作者
-博客：http://blog.csdn.net/klxh2009<br>
-简书：http://www.jianshu.com/u/12a81897d5bc
+## About Me
+CSDN：http://blog.csdn.net/klxh2009<br>
+JianShu：http://www.jianshu.com/u/12a81897d5bc
 
 ## License
 
